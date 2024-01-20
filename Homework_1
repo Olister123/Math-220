@@ -1,0 +1,129 @@
+\documentclass[letterpaper, 12pt]{article}
+\newcommand{\myname}{Oliver Kis}
+\newcommand{\mystudentnumber}{15576333}
+\newcommand{\hw}{1} %%This needs to be changed each assignment
+\newcommand{\dates}{15 January 2024}
+
+
+%Math Packages 
+\usepackage{amsmath, amsfonts, amssymb, amsthm}
+\usepackage[usenames, dvipsnames]{color}
+\theoremstyle{definition}
+\newtheorem{pb}{Problem} %%shortcut for problem word
+
+
+%photo packages
+\usepackage{graphicx} % Required for inserting images
+
+
+\usepackage[paper = letterpaper, left = 25mm, right = 25mm, top = 3cm, bottom = 25mm]{geometry}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+
+\lhead{\myname}
+\chead{Homework \hw}
+\rhead{\mystudentnumber}
+
+\lfoot{MATH 220}
+\cfoot{Page \thepage}
+\rfoot{\mystudentnumber}
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+
+\begin{document}
+\begin{titlepage}
+\centering
+    \includegraphics{UBC.png}\\
+    \vspace{1cm}
+    {\bfseries\large
+    Homework \hw \\
+    \vspace{0.5cm}
+    \myname\\
+    \vspace{0.5cm}
+    \mystudentnumber\\
+    \vspace{0.5cm}
+    \dates\\  %%THIS DATE NEEDS TO BE CHANGED ALWAYS
+    }
+    
+    \vfill
+    {\large
+    The University of British Columbia\\
+    \vspace{0.25cm}
+    Electrical and Computer Engineering\\
+    \vspace{0.25cm}
+    Math 220 - Mathematical Proofs\\
+    \vspace{0.25cm}
+    Instructor: Bennett Michael\\
+    }
+
+
+\end{titlepage}
+
+\subsection*{Solutions}
+For Homework \hw, only problems 1, 2, and 8 are worth marks.
+%%Problem 1
+\begin{pb} (6 Points) Write the following sets by listing their elements.
+\begin{enumerate}
+    \item [1)] $A_{1}$ = \{$x$ $\in$ $\mathbb{N}$ : $x^2$ $<$ 5\}\\\\
+    Answer: \{1, 2\}
+    \item [2)] $A_{2}$ = \{$x$ $\in$ $\mathbb{Z}$ : $x^2$ $<$ 5\}\\\\
+    Answer: \{-2, -1, 0, 1, 2\}
+    \item [3)] $A_{3}$ = \{$x$ $\in$ $\mathbb{N}$ : (3 $|$ $x$) $\bigwedge$ ($x$ $|$ 180)\}\\\\
+    Answer: \{3, 6, 9, 12, 15, 18, 30, 45, 60, 90, 180\}
+    \item [4)] $A_{4}$ = \{$x$ $\in$ $\mathbb{Z}$ : $\dfrac{x+2}{5}$ $\in$ $\mathbb{Z}$\}\\\\
+    Answer: \{..., -17, -12, -7, -2, 3, 8, 13, 18, ...\}
+    \item [5)] $A_{5}$ = \{$a$ $\in$ $B$ : 6 $\leq$ 4$a$ + 1 $<$ 17 \}\\\\
+    Answer: \{2, 3\}
+    \item [6)] $A_{6}$ = \{$x$ $\in$ $B$ : 50 $<$ $x$$d$ $<$ 100 for some $d$ $\in$ $D$ \}, where $B$ = \{2, 3, 5, 7, 11, 13, ...\} and $D$ = \{5, 10\}\\\\
+    Answer: \{7, 11, 13, 17, 19\}
+\end{enumerate}   
+\end{pb}
+
+
+%%Problem 2
+\begin{pb} (6 Points) Write the following sets using the set builder notation:
+\begin{itemize}
+    \item[a)] $A$ = \{1, 8, 15, 22, 29, ...\}\\\\
+    Answer: $A$ = \{$x$ $\in$ $\mathbb{Z}$ : 1 $\leq$ 7$x$ + 1 \}
+    \item[b)] $B$ = \{16, 8, 4, 2, 1, $\dfrac{1}{2}$, $\dfrac{1}{4}$, $\dfrac{1}{8}$, $\dfrac{1}{16}$\}\\\\
+    Answer: $B$ = \{$x$ $\in$ $D$ : $\dfrac{16}{x}$\}, where $D$ = \{1, 2, 4, 16, 31, 64, 128, 256, 512\}
+    \item[c)] $C$ = \{ ..., -$\dfrac{3}{10}$, -$\dfrac{2}{5}$, -$\dfrac{1}{2}$, 0, $\dfrac{1}{2}$, $\dfrac{2}{5}$, $\dfrac{3}{10}$, $\dfrac{4}{17}$, $\dfrac{5}{26}$, ... \}\\\\
+    Answer: C = \{$\dfrac{k}{k^2+1}$ : $k$ $\in$ $\mathbb{Z}$\}
+\end{itemize}
+\end{pb}
+
+
+%%Problem 8
+\vspace{3cm} %%Skips to the next page
+\setcounter{pb}{7}
+\begin{pb} (6 Points) Consider the set
+\begin{center}
+$A$ = \{$\dfrac{1}{2}$, $\dfrac{3}{4}$, $\dfrac{5}{6}$, $\dfrac{7}{8}$, ...\}.
+\end{center}
+Which one(s) among the following suggestions below describe(s) it correctly. (Simple answer by Yes or No - no justification required).
+\begin{enumerate}
+\item[1.] $A$ = \{$x$ $\in$ $\mathbb{R}$ : there exists $m$ $\in$ $\mathbb{N}$ satisfying $x$ = $\dfrac{2m - 1}{2m}$\}\\\\
+Answer: YES
+\item[2.] $A$ = \{$\dfrac{2m - 1}{2m}$ : $m$ $\in$ $\mathbb{N}$\}\\\\
+Answer: YES
+\item[3.] $A$ = \{$x$ $\in$ $\mathbb{R}$ : $\dfrac{2m - 1}{2m}$ and $m$ $\in$ $\mathbb{N}$\}\\\\
+Answer: NO
+\item[4.] $A$ = \{$x$ $\in$ $\mathbb{Q}$ : $\dfrac{2m - 1}{2m}$ and $m$ $\in$ $\mathbb{N}$\}\\\\ 
+Answer: NO
+\item[5.] $A$ = \{$x$ $\in$ $\mathbb{Q}$ : there exists $m$ $\in$ $\mathbb{N}$ satisfying $x$ = $\dfrac{2m - 1}{2m}$\}\\\\
+Answer: YES
+\item[6.] $A$ = \{$\dfrac{2m - 1}{2m}$ : $m$ $\in$ $\mathbb{Z}$ and $m$ $\geq$ 1\}\\\\
+Answer: YES
+\end{enumerate}
+\end{pb}
+
+
+
+
+\end{document}
+
