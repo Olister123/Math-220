@@ -1,0 +1,255 @@
+\documentclass[letterpaper, 12pt]{article}
+\newcommand{\myname}{Oliver Kis}
+\newcommand{\mystudentnumber}{15576333}
+\newcommand{\hw}{3} %%This needs to be changed each assignment
+\newcommand{\dates}{02 February 2024}
+
+
+%Math Packages 
+\usepackage{amsmath, amsfonts, amssymb, amsthm}
+\usepackage{setspace}
+\usepackage[usenames, dvipsnames]{color}
+\usepackage{nicefrac}
+\theoremstyle{definition}
+\newtheorem{pb}{Problem} %%shortcut for problem word
+
+
+%photo packages
+\usepackage{graphicx} % Required for inserting images
+
+
+\usepackage[paper = letterpaper, left = 25mm, right = 25mm, top = 3cm, bottom = 25mm]{geometry}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+
+\lhead{\myname}
+\chead{Homework \hw}
+\rhead{\mystudentnumber}
+
+\lfoot{MATH 220}
+\cfoot{Page \thepage}
+\rfoot{\mystudentnumber}
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+
+\begin{document}
+\begin{titlepage}
+\centering
+    \includegraphics{UBC.png}\\
+    \vspace{1cm}
+    {\bfseries\large
+    Homework \hw \\
+    \vspace{0.5cm}
+    \myname\\
+    \vspace{0.5cm}
+    \mystudentnumber\\
+    \vspace{0.5cm}
+    \dates\\  %%THIS DATE NEEDS TO BE CHANGED ALWAYS
+    }
+    
+    \vfill
+    {\large
+    The University of British Columbia\\
+    \vspace{0.25cm}
+    Electrical and Computer Engineering\\
+    \vspace{0.25cm}
+    Math 220 - Mathematical Proofs\\
+    \vspace{0.25cm}
+    Instructor: Bennett Michael\\
+    }
+
+
+\end{titlepage}
+
+\subsection*{Solutions}
+For Homework \hw, Problem 3, 4, 5, 6, a part of 7, and a part of 8 are worth marks.
+\begin{spacing}{1.33}
+
+
+%%Problem 3
+\vspace{5mm}
+\setcounter{pb}{2}
+\begin{pb} 
+
+
+    $\color{blue}{(2}$ $\color{blue}{Points)}$ Let $a \in \mathbb{Z}$. Prove the following statement:
+    \begin{center}
+        if $5 \mid 2a$, then $5 \mid a$.
+    \end{center}  
+    
+
+
+    %Answer to Problem 3
+    Proof: Let $a \in \mathbb{Z}$. Using divisibility rules and implication rules, if the hypothesis and conclusion are both true, then the implication is true.
+    \begin{center}
+        if $2a = 5k$ where $k \in \mathbb{Z}$\\
+        $a = \frac{5k}{2}$\\
+        Where $a \in \mathbb{Z} $, this means $k = 2m$\\
+        $a = \frac{5 * 2m}{2}$= $5m$
+        
+    \end{center}
+
+
+
+\end{pb}
+
+
+
+
+%%Problem 4
+\vspace{20cm}
+\begin{pb} 
+    $\color{blue}{(5}$ $\color{blue}{Points)}$
+    \begin{enumerate}
+
+        %%Problem 4-1
+        \item[1.] $\color{blue}{(1}$ $\color{blue}{Points)}$ Prove the following statement. For every   $a \in \mathbb{R}$,
+        \begin{center}
+            if $a \geq 4$, then $-\nicefrac{a^2}{4} + a \leq 0$.
+        \end{center}
+    
+        %Answer for Problem 4-1
+        Proof: Let $a \in \mathbb{R}$. Solve via contrapositive.
+        \begin{center}
+            if $-\frac{a^2}{4} + a > 0$ then $a < 4$\\
+            $-\frac{a^2}{4} > -a \longrightarrow \frac{a^2}{4} < a$\\
+            $a^2 < 4a = a < 4$
+        \end{center}
+    
+    
+    
+        %%Problem 4-2
+        \item[2.] $\color{blue}{(4}$ $\color{blue}{Points)}$ Let $a \in \mathbb{R}$. Prove the  following statement:
+        \begin{center}
+            (for every $x \in \mathbb{R}$, we have $x^2 +ax+a > 0$) if and only if $(0 < a < 4)$.
+        \end{center}
+    
+        %%Proof for PRoblem 4-2
+        Proof: Let $a \in \mathbb{R}$. Biconditionally solve this problem.
+        \begin{center}
+            $\forall$  $x \in \mathbb{R}$, $x^2 + ax + a > 0 \Longleftrightarrow 0 < a < 4$\\
+            \vspace{5mm}
+            $(\Longleftarrow)$ : Completeting the square first $\rightarrow$ $(x + \frac{a}{2})^2 + \frac{4a-a^2}{4} > 0$\\
+            Since $0 < a < 4 \therefore 4a - a^2 > 0$, thus $\frac{4a-a^2}{4} > 0$\\
+            $(x + \frac{a}{2})^2 \geq 0$ since $()^2$ is always positive\\
+            Hence, $(x + \frac{a}{2})^2 + \frac{4a-a^2}{4} > 0$ when $0 < a < 4$\\
+            \vspace{5mm}
+            $(\Longrightarrow)$ : Utilizing the contrapositive from part one to solve this.\\
+            $4a - a^2 = -\frac{a^2}{4} + a \longrightarrow -\frac{a^2}{4} + a > 0$ from earlier proof.\\
+            $\therefore 4a - a^2 > 0$ and reworking $a < 4$.\\
+            Thus, our range for $a$ is $0 < a < 4$ for $\frac{4a - a^2}{4}$\\
+            Additionally, $(x + \frac{a}{2})^2 \geq 0$ since $()^2$ is always positive, but it can be zero\\
+            Finally, if $(x + \frac{a}{2})^2$ is zero $\longrightarrow 0 + \frac{4a-a^2}{4} >0$, this implies to get $>0$, we need $0<a<4$\\
+
+            \vspace{5mm}
+            With both implications being solved, the biconditional statement is true.
+        \end{center}
+        
+    \end{enumerate}
+\end{pb}
+
+
+
+
+
+%%Problem 5
+\vspace{1cm}
+\begin{pb} 
+    $\color{blue}{(2}$ $\color{blue}{Points)}$ Let $m$ $\in$ $\mathbb{Z}$. Prove that if $5 \nmid m$, then $m^2 \equiv 1$ (mod $5)$ or \\ 
+    $m^2 \equiv -1$ (mod $5)$.
+
+    %%Answer to Problem 5
+    Proof: This is solved by proof by cases. Let $m \in \mathbb{Z}$. When $5\nmid m$, there are 4 cases.
+
+    \begin{center}
+        1) Case 1 : $m\equiv1(mod5) \longrightarrow m =5k+1$ for some $k \in \mathbb{Z}$\\
+        $m^2 = (5k+1)^2 \longrightarrow m^2 = 25k^2 + 10k +1 \longrightarrow m^2 = 5(5k^2+2k)+1$\\
+        $\therefore m^2 \equiv 1(mod5)$, which holds our first statement true\\
+        \vspace{5mm}
+        2) Case 2 : $m\equiv2(mod5) \longrightarrow m^2 = (5k+2)^2 \longrightarrow m^2 = 5(5k^2 + 4k) + 4$\\
+        $\therefore m^2 \equiv 4(mod5)$ which is equivalent to $m^2 \equiv -1(mod5)$\\
+        \vspace{5mm}
+        3) Case 3 : $m\equiv3(mod5)$ achieves the same as Case 2\\ $m^2 \equiv 9(mod5) = m^2 \equiv -1(mod5)$\\
+        \vspace{5mm}
+        4) Case 4 : $m\equiv4(mod5)$ achieved the same as Case 1\\ $m^2 \equiv 16(mod5) = m^2 \equiv 1(mod5)$\\
+        \vspace{5mm}
+        Thus, we proved that $5 \nmid m$, then $m^2 \equiv 1$ (mod $5)$ or $m^2 \equiv -1$. (mod $5)$
+    \end{center}
+
+\end{pb}
+
+
+
+
+
+
+%% Problem 6
+\vspace{1cm} %%Skip to next page
+\begin{pb}
+    $\color{blue}{(2}$ $\color{blue}{Points)}$ For $a \in \mathbb{Z}$, prove:
+    \begin{center}
+    $3 \nmid a \Longrightarrow$ (there exists $b \in \mathbb{Z}$ such that $ab \equiv 1 mod 3$
+    \end{center}
+
+    %Proof to Problem 6
+    Proof: Let $a, b \in \mathbb{Z}$. This is solved by two cases
+    \begin{center}
+            1) Case 1 : $a = 3k + 1 \Longrightarrow \exists \: b \in \mathbb{Z} \: s.t. \:  ab = 3k + 1$\\
+            Using simple numbers, when $b = 1 \longrightarrow a = 3k + 1 \Longrightarrow a\equiv 1$(mod3).\\
+            \vspace{5mm}
+            2) Case 2 : $a = 3k + 2 \Longrightarrow \exists \: b \in \mathbb{Z} \: s.t. \:  ab = 3k + 1$\\
+            When $b = 2$, $a = 3k +2 \longrightarrow 2a = 2(3k + 2) = 6k + 4 = 6k + 3 + 1 = 3(2k + 1) + 1$\\
+            $\therefore$ when $b = 2, ab \equiv 1$(mod3)
+            
+    \end{center}
+\end{pb}
+
+
+%% Problem 7-1
+\vspace{5cm}
+\begin{pb}
+    $\color{blue}{(2}$ $\color{blue}{Points)}$ Prove that the product of 5 consecutive integers is a multiple of 5.\\
+
+    %% Answer to 7-1
+
+    Proof: Pure logic solves this question. Since we utilize 5 consecutive integers, this indicates at one point there is a multiple of 5 in the product. This means the product will be divisible by 5.
+
+    \begin{center}
+        $a, b, c, d, e \in \mathbb{Z}$. We know with consecutive numbers that $a=a, b = a+1, c = a+2, d = a+3,$ and $e = a + 4$.\\
+        Testing a value such as $a=1$ or $a=2$, this stands true.\\
+        Since we know our hypothesis is true, it also stands that $a=a+1, b = a+2, c = a+3, d = a+4,$ and $e = a + 5$\\
+        $e = a + 5$ has a remainder of $5$, thus as long as one part of the product is divisble by 5, all of it is.
+        
+    \end{center}
+
+    
+\end{pb}
+
+
+%% Problem 8-1
+
+\begin{pb}
+    $\color{blue}{(2}$ $\color{blue}{Points)}$ We recall that given $a, b \in \mathbb{Z}$ such that $ab \neq 0$, we define the gcd of $a$ and $b$ to be the greatest integer that divides both $a$ and $b$. We denote this by $gcd(a,b)$\\
+    
+    Let $a, b \in \mathbb{Z}$ such that $ab \neq 0$. We suppose that there exists $u, v, \in \mathbb{Z}$ such that
+    \begin{center}
+        $1 = au + bv$
+    \end{center}
+    Prove that gcd$(a, b) \equiv 1$.\\
+
+
+    %%Answer to 8-1
+    Proof: Let $a, b \in \mathbb{Z}$. We also know neither $a$ or $b$ can be $0$. Researching B\'ezout's identity and greatest common divisor, we know that $c \in \mathbb{Z}$ divides $gcd(a,b)$. We also know that $c$ also divides $au$ and $bv$. Through linearity, we know when added, $au + bv = 1$. This also states that 1 is divisible by $c$. If you divide 1, you can only divide by 1 or -1. But gcd is always going to assume a positive value.
+    $\therefore gcd(a,b) \equiv 1$. Additionally, that means $a, b$ are primes.
+\end{pb}
+
+
+\end{spacing}
+\end{document}
+
+

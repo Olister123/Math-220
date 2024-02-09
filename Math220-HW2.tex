@@ -1,0 +1,158 @@
+\documentclass[letterpaper, 12pt]{article}
+\newcommand{\myname}{Oliver Kis}
+\newcommand{\mystudentnumber}{15576333}
+\newcommand{\hw}{2} %%This needs to be changed each assignment
+\newcommand{\dates}{19 January 2024}
+
+
+%Math Packages 
+\usepackage{amsmath, amsfonts, amssymb, amsthm}
+\usepackage[usenames, dvipsnames]{color}
+\theoremstyle{definition}
+\newtheorem{pb}{Problem} %%shortcut for problem word
+
+
+%photo packages
+\usepackage{graphicx} % Required for inserting images
+
+
+\usepackage[paper = letterpaper, left = 25mm, right = 25mm, top = 3cm, bottom = 25mm]{geometry}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+
+\lhead{\myname}
+\chead{Homework \hw}
+\rhead{\mystudentnumber}
+
+\lfoot{MATH 220}
+\cfoot{Page \thepage}
+\rfoot{\mystudentnumber}
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+
+\begin{document}
+\begin{titlepage}
+\centering
+    \includegraphics{UBC.png}\\
+    \vspace{1cm}
+    {\bfseries\large
+    Homework \hw \\
+    \vspace{0.5cm}
+    \myname\\
+    \vspace{0.5cm}
+    \mystudentnumber\\
+    \vspace{0.5cm}
+    \dates\\  %%THIS DATE NEEDS TO BE CHANGED ALWAYS
+    }
+    
+    \vfill
+    {\large
+    17/20\\
+    \vspace{0.25cm}
+    The University of British Columbia\\
+    \vspace{0.25cm}
+    Electrical and Computer Engineering\\
+    \vspace{0.25cm}
+    Math 220 - Mathematical Proofs\\
+    \vspace{0.25cm}
+    Instructor: Bennett Michael\\
+    }
+
+
+\end{titlepage}
+
+\subsection*{Solutions}
+For Homework \hw, parts of problems 1, 2 and all of problem 4 and 5 are worth marks.
+%%Problem 1
+\vspace{5mm}
+\begin{pb} (6 Points) Prove the following statements:
+\begin{enumerate}
+
+    \item [1.] (2 Points) Let $n$ $\in$ $\mathbb{Z}$. If 3 $|$ ($n$-4), then 3 $|$ ($n^2$-1).
+    
+    Proof: Let $n$ $\in$ $\mathbb{Z}$, we work with 3 $|$ ($n$-4) to equate it to 3 $|$ ($n^2$-1).\\
+    $n$-4 = 3$k$ $ ->$
+    $n^2$ = $(3k + 4)^2$ $->$ $n^2$ = $9k^2 + 24k + 16 ->$ $n^2 = 9k^2 + 24k + 15 + 1$\\\\
+    After working through, we get $n^2 - 1  = 3(3k^2 + 8k + 5)$ . From our original statement 3 $|$ ($n$-4), we now know that 3 $|$ ($n^2$-1) stands true, as we can divide $n^2-1$ by 3. 
+    \vspace{5mm}
+    \item [2.] (2 Points) For $a$, $b$ $\in$ $\mathbb{Z}$: if $a$ and $b$ have the same parity then $a + b - 4$ is even.
+    
+    Proof: Let $a, b$ $\in$ $\mathbb{Z}$, this proof requires two cases, one where $a$ and $b$ are $\bold{even}$ and another where they are $\bold{odd}$
+
+    1) Our first case we let $a$ and $b$ be $\bold{even}$. If $a = 2k$ and $b = 2l$, $k, l \in \mathbb{Z}$ are both even, there only exists even solutions of $a + b = 2k + 2l$. Hence, subtracting -4, an even value, $a+b-4 \equiv 2k + 2l -4 \equiv 2(k + l) - 4$ would remain even.\\
+    
+    2) Our second case we let $a$ and $b$ be $\bold{odd}$. If $a = 2k + 1$ and $b = 2l + 1, k, l \in \mathbb{Z}$, are both odd, there only exists even solutions when added as $a + b - 4 \equiv 2k + 1 + 2l + 1 -4 \equiv 2k + 2l -2$, which is always even.\\
+
+    Both cases are true, therefore when $a$ and $b$ have the same parity, $a+b-4$ is proven even.
+
+    \vspace{5mm}
+    \item [3.] (2 Points) For $x$ $\in$ $\mathbb{R}$: if $x > 2$ then $\dfrac{8}{x^2 + 2x} < 1$.\\\\
+    Proof: Let $x \in \mathbb{R}$. By direct proof, looking at the denominator, $x^2 + 2x = x(x+2)$. 
+    From knowing $x>2$, $x + 2 > 4$, then we get $x(x+2) > 4x$. Further, $\dfrac{8}{x^2 + 2x} < \dfrac{8}{4x}$ which then becomes $\dfrac{8}{x^2 + 2x} < \dfrac{2}{x} < 1$. Therefore, when $x > 2$ then $1 > \dfrac{2}{x}$, with $x$ always growing bigger, our statement is always less than 1.
+
+\end{enumerate}   
+\end{pb}
+
+
+%%Problem 2
+\vspace{30mm}
+\begin{pb} (6 Points)
+\begin{enumerate}
+    \item[1.] (3 Points) Let $n$ $\in$ $\mathbb{Z}$. Prove that if $5n$ is even then $n$ is even.\\
+
+    Proof: Let $n \in \mathbb{Z}.$ Solving by contrapositive, we knowing $n$ is odd means $n = 2k + 1$ for  $k \in \mathbb{Z}$.
+    \begin{center}
+        $5n = 5 * 2k + 1 = 10k + 1$
+    \end{center}
+    Since $10k + 1$ is always going to be odd as it is nearly identical to $2k + 1$, therefore our statement that $5n$ is even then $n$ is even holds true.
+
+    \vspace{5mm}
+    \item[2.] (3 Points) Let $n$ $\in$ $\mathbb{Z}$. Prove that if 5 divides $n$ and 2 divides $n$, then 10 divides $n$.\\
+
+    Proof: Let $n \in \mathbb{Z}$. Knowing that $n=5k$ and $n=2l$, where $k, l \in \mathbb{Z}$, we know $5k=2n$, therefore $\dfrac{5k}{2} = l$. 5 is not divisible by 2, hence $k$ must be, $k = 2m$ for $m \in \mathbb{Z}$. Going back to $n = 5k$, we replace the $k$, $n = 5 * 2m \rightarrow n = 10m$, holding the statement true.
+ 
+\end{enumerate}
+\end{pb}
+
+
+%%Problem 4
+\vspace{1cm} %%Skips to the next page
+\setcounter{pb}{3}
+\begin{pb} (4 Points) Let $n$ $\in$ $\mathbb{Z}$. Prove the following claim:
+\begin{center}
+If 4 divides $n$ - 1, then $n$ is odd and $(-1)^{(n-1)/2}$ = 1.
+\end{center}
+Proof: Let $n \in \mathbb{Z}$. Reworking $4 | (n-1)$, we get $n = 4k + 1$, with $k \in \mathbb{Z}$, hence is always odd. Proving our first point, that n is odd.
+Replace the n, $(-1)^{(4k+1-1)/2} \rightarrow (-1)^{2k}$. We know $2k$ is even, therefore we also conclude that $(-1)^{2k}$, is always positive and 1. \\\\
+Therefore, both statements are true.
+\end{pb}
+
+
+%% Problem 5
+\vspace{10cm}
+\begin{pb}
+    (4 Points) $\mathbf{Definition:}$ We call an element $x$ $\in$ $\mathbb{R}$ an \textit{integer root} if there exist $k$ $\in$ $\mathbb{N}$ and $m$ $\in$ $\mathbb{Z}$ such that $x^k = m$.\\\\
+    Use this definition to show, for $a$, $b$ $\in$ $\mathbb{R}$:
+    \begin{center}
+    if $a$ and $b$ are integer roots, then $a$$b$ is an integer root.
+    \end{center}
+    Proof: Let $a, b \in \mathbb{R}$. $a^{k_{1}} = m_{1}$ and $b^{k_{2}} = m_{2}$, where $k \in \mathbb{N}$ and $m \in \mathbb{Z}$.
+    \begin{center}
+        $ab = a^{k_{1}} * b^{k_{2}} = m_{1} * m_{2}$\\
+        \vspace{3mm}
+        $k = k_{1} + k_{2}$\\
+        \vspace{3mm}
+        $ab^k = (a^{k_{1}} * b^{k_{2}})^k = (m_{1} * m_{2})^k$\\
+        \vspace{3mm}
+        $(m_{1} * m_{2})^k = m_{1}^{k} * m_{2}^{k}$
+    \end{center}
+    The final statement, with $k \in \mathbb{N}$ indicates $m \in \mathbb{Z}$ is true. Therefore, $m_{1}^{k} * m_{2}^{k} \equiv m_{1} * m_{2}$, which is just an integer. Hence, the statement $ab = m_{1} * m_{2}$ stands true.
+\end{pb}
+
+\end{document}
+
