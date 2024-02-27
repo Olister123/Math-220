@@ -1,0 +1,215 @@
+\documentclass[letterpaper, 12pt]{article}
+\newcommand{\myname}{Oliver Kis}
+\newcommand{\mystudentnumber}{15576333}
+\newcommand{\hw}{4} %%This needs to be changed each assignment
+\newcommand{\dates}{09 February 2024}
+
+
+%Math Packages 
+\usepackage{amsmath, amsfonts, amssymb, amsthm}
+\usepackage{setspace}
+\usepackage[usenames, dvipsnames]{color}
+\usepackage{nicefrac}
+\theoremstyle{definition}
+\newtheorem{pb}{Problem} %%shortcut for problem word
+
+
+%photo packages
+\usepackage{graphicx} % Required for inserting images
+
+
+\usepackage[paper = letterpaper, left = 25mm, right = 25mm, top = 3cm, bottom = 25mm]{geometry}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+
+\lhead{\myname}
+\chead{Homework \hw}
+\rhead{\mystudentnumber}
+
+\lfoot{MATH 220}
+\cfoot{Page \thepage}
+\rfoot{\mystudentnumber}
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+
+\begin{document}
+\begin{titlepage}
+\centering
+    \includegraphics{UBC.png}\\
+    \vspace{1cm}
+    {\bfseries\large
+    Homework \hw \\
+    \vspace{0.5cm}
+    \myname\\
+    \vspace{0.5cm}
+    \mystudentnumber\\
+    \vspace{0.5cm}
+    \dates\\  %%THIS DATE NEEDS TO BE CHANGED ALWAYS
+    }
+    
+    \vfill
+    {\large
+    The University of British Columbia\\
+    \vspace{0.25cm}
+    Electrical and Computer Engineering\\
+    \vspace{0.25cm}
+    Math 220 - Mathematical Proofs\\
+    \vspace{0.25cm}
+    Instructor: Bennett Michael\\
+    }
+
+
+\end{titlepage}
+
+\subsection*{Solutions}
+For Homework \hw, Problem 1, 2, parts of 4, and parts of 5 are worth marks.
+\begin{spacing}{1.33}
+
+
+%%Problem 1
+\vspace{5mm}
+\setcounter{pb}{0}
+\begin{pb} 
+
+
+    $\color{blue}{(2}$ $\color{blue}{Points)}$ Prove, for $x, y, \in \mathbb{Z}$, that
+    \begin{center}
+        $(xy$ even and $x + y$ even) $\Longrightarrow (x$ even and $y$ even)
+    \end{center}  
+    
+
+
+    %Answer to Problem 1
+    Proof: Let $x, y \in \mathbb{Z}$. We proved this by Contrapositive and several cases. The \newline \indent contrapositive turns out to be $(x$ odd or $y$ odd) $\Longrightarrow (xy$ odd or $x+y$ odd)
+    \begin{itemize}
+        \item[1)] Case one 
+
+            {\centering $x$ is odd and $y$ is odd $\therefore$ $x = 2k + 1$ and $y = 2l + 1$ where $k, l \in \mathbb{Z}$.
+            $xy = (2k+1)(2l+1) = 4kl + 2k + 2l + 1 = 2(2kl + k + l )+1$\par}
+            
+        \item[2)] Case two
+
+            {\centering $x$ is odd and $y$ is even $\therefore$ $x = 2k + 1$ and $y = 2l$ where $k, l \in \mathbb{Z}$. 
+            $x + y = 2k + 1 + 2l = 2 (k + l) + 1$ \par}
+            
+        \item[3)] Case three
+        
+            {\centering Identical to case two, but $x$ and $y$ are "flipped" $x$ is even and $y$ is odd.\par}
+    \end{itemize}
+
+    Hence, all three cases prove the contrapositive, which proves the original statement, as required. //
+
+\end{pb}
+
+
+%%problem 2
+\vspace{5mm}
+\begin{pb}
+    $\color{blue}{(2}$ $\color{blue}{Points)}$ For $a \in \mathbb{R}$, we define the set $S_a = {x \in \mathbb{R} : (x \geq 0 \wedge x < a - 2)}$.\\
+    Show that
+    
+        {\centering $S_a = \emptyset$ if and only is $a \in ] - \infty, 2]$ \par}
+    
+    %%Solution
+    Proof: Let $a, x \in \mathbb{R}$. To prove this, we use the biconditional technique.\\
+
+    {\centering $\Longrightarrow$ If our set is null, we know $x \geq 0$ isn't satisfied and/or $x < a - 2$ isn't satisfied. \\ Using the bounds, when $a = 2$, we know $x < 0$, which doesn't hold with the statement $x \geq 0$ \par}
+    {\centering $\Longleftarrow$ With $a \in ] - \infty, 2]$, we know $-\infty < a-2 \leq 0$. Using the maximum, this won't satisfy both $x \geq 0$ and $x < a-2$  \par}
+
+    
+\end{pb}
+
+
+
+
+
+
+%%problem 3
+\vspace{5mm}
+\setcounter{pb}{3}
+\begin{pb}
+    $\color{blue}{(12}$ $\color{blue}{Points)}$ For each of the following statements:
+    \begin{itemize}
+        \item Negate the statement.
+        \item Decide if the original statement is true or false and justify your answer.
+    \end{itemize}
+    \begin{enumerate}
+        \item[1.] $\color{blue}{(2}$ $\color{blue}{Points)}$  $\forall \: a \in \mathbb{Z}, ((6\mid a$ and $8\mid a \: \Longrightarrow 48 \mid a).$
+        \begin{itemize}
+            \item $\exists \: a \in \mathbb{Z}$, $((6 | a$ and $8 | a \Longrightarrow 48 \nmid a)$.
+            \item False $\longrightarrow$ Finding gcd(6, 8) is 24, next multiple is 48. These work with the implications, however the next multiple of 72 does not.  
+        \end{itemize}
+        
+        \item[2.] $\color{blue}{(2}$ $\color{blue}{Points)}$ $ \forall \: x \in \mathbb{R}, \forall y \in \mathbb{R}, (xy \geq 0 \Longrightarrow x + y \geq 0).$
+        \begin{itemize}
+            \item $\exists \: x \in \mathbb{R}, \exists \: y \in \mathbb{R} $ s.t. $(xy \geq 0 \Longrightarrow x + y < 0).$
+            \item False $\longrightarrow$ $\forall \: (-x)$ and $\forall \: (-y)$ satisfy $xy \geq 0$, but does not satisfy $(x + y \geq 0).$ 
+        \end{itemize}
+        
+        \item[3.] $\color{blue}{(2}$ $\color{blue}{Points)}$ $\forall \: a, b \in \mathbb{Z}, \forall n \in \mathbb{N}, (6a \equiv 6b$ mod $6n \Longrightarrow a \equiv b$ mod $n$).
+        \begin{itemize}
+            \item $\exists \: a, b \in \mathbb{Z}, \exists \: n \in \mathbb{N}, (6a \equiv 6b$ mod $6n \Longrightarrow a \not\equiv b$ mod $n$).
+            \item  False $\longrightarrow 6a \equiv 6b$ mod $6n$ is equivalent to $6a = 6nk + 6b$, where $k \in \mathbb{Z}$, divide both sides by 6, $a = nk + b$ which is equivalent to $a = b$ mod $n$. But, with $\forall \: a, b$, when $a$ is divided by $nk$, there is a time when $b$ is just zero, not all values.
+        \end{itemize}
+
+        \item[4.] $\color{blue}{(2}$ $\color{blue}{Points)}$ $\forall \: a, b \in \mathbb{Z},  (4a \equiv 4b$ mod $24 \Longrightarrow a \equiv b$ mod $24$). 
+        \begin{itemize}
+            \item $\exists \: a, b \in \mathbb{Z}, (4a \equiv 4b$ mod $24 \Longrightarrow a \not\equiv b$ mod $24)$.
+            \item False $\longrightarrow$ As shown before this, when $4a$ is divided to have a remainder of zero, there should be no other value of $b$ than zero.
+        \end{itemize}
+
+        \item[5.] $\color{blue}{(2}$ $\color{blue}{Points)}$ $\exists \: x \in \mathbb{Z}$ such that $((x > 84) and (x \equiv 75$ mod $84$)).
+        \begin{itemize}
+            \item $\forall \: x \in \mathbb{Z}$ such that $((x \leq 84$ or $x \not\equiv 75$ mod84)).
+            \item True $\longrightarrow$ When x is above 84, specifically when x is 159, the statement holds. 
+        \end{itemize}
+        
+        \item[6.] $\color{blue}{(2}$ $\color{blue}{Points)}$ $\exists \: x, y \in \mathbb{R}$ such that $(x^2 \geq y^2$ and $x \leq y)$.
+        \begin{itemize}
+            \item $\forall \: x, y \in \mathbb{R}$ such that $(x^2 < y^2$ or $x > y)$.
+            \item True $\longrightarrow$ Take [-1, 1] and the original statement works
+        \end{itemize}
+    \end{enumerate}
+\end{pb}
+
+
+
+
+%%Problem 5
+\vspace{10cm}
+\begin{pb}
+    $\color{blue}{(4}$ $\color{blue}{Points)}$ Let $(u_0, u_1, u_2, u_3, ... )$ be a sequence of real numbers. We write this as $(u_n)_{n \in \mathbb{N}}.$ We say that it is:
+    \begin{itemize}
+        \item bounded above when: $\: \exists \: A \in \mathbb{R} \: s.t. ( \forall \: n \in \mathbb{N}, u_n \leq A).$
+        \item bounded below wheb: $\: \exists \: B \in \mathbb{R} \: s.t. ( \forall \: n \in \mathbb{N}, u_n \geq B).$
+    \end{itemize}
+    We say that it converges towards $+\infty$ when
+    \begin{center}
+        $\forall \: A > 0, \exists \: m \in \mathbb{N} \: s.t. \forall \: n \in \mathbb{N}, (n \geq m \Longrightarrow u_n > A).$
+    \end{center}
+    and that it converges towards $-\infty$ when
+    \begin{center}
+        $\forall \: B < 0, \exists \: m \in \mathbb{N} \: s.t. \forall \: n \in \mathbb{N}, (n \geq m \Longrightarrow u_n < B).$
+    \end{center}
+    \begin{enumerate}
+        \item [1.]$\color{blue}{(1}$ $\color{blue}{Points)}$ Write in quantifiers the statement:
+        \begin{center}
+            $(u_n)_{n \in \mathbb{N}}$ is not bounded below.
+        \end{center}
+        \item [2.]$\color{blue}{(1}$ $\color{blue}{Points)}$ Give an example of sequence of real numbers $(u_n)_{n \in \mathbb{N}}$ which is bounded above but not bounded below.
+        \item [3.]$\color{blue}{(2}$ $\color{blue}{Points)}$ Write in quantifiers the statement:
+        \begin{center}
+            $(u_n)_{n \in \mathbb{N}}$ does not converge towards $+\infty$.
+        \end{center}
+    \end{enumerate}
+\end{pb}
+
+
+
+\end{spacing}
+\end{document}
